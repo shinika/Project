@@ -1,0 +1,25 @@
+Table name: member_master
+
+Attributes: memberCode PK
+	    memberType
+	    name
+	    bookCount
+-----------------------------------------------
+Table name: book_master
+
+Attributes: bookCode PK
+	    bookTitle
+	    bookAuthor
+	    
+	    
+---------------------------------------------------
+Table name: book_returns
+
+Attributes: issueSerialNumber PK
+	    memberCode FK member_master
+	    bookCode FK book_master
+	    dateOfIssue default sysdate
+	    dueDateOfReturn date
+	    bookIssuable
+
+
